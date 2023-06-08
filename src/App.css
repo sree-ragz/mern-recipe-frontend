@@ -1,0 +1,44 @@
+.nav-local{
+  padding-left: 60%;
+  padding-top: 10px;
+  display: inline-flex;
+}
+.content{
+  padding-top: 20%;
+  text-align: center;
+}
+.login{
+  display: inline-block;
+  margin-left: 350px;
+  margin-top: 120px;
+}
+.register{
+  display: inline-block;
+  margin-left:150px ;
+  margin-top: 40px;
+}
+.formroot{
+  margin-left: 40%;
+  display: inline-flex;
+  margin-top: 8s0px;
+}
+.item{
+  align-items: center;
+}
+.h2c{
+  margin-left: 45%;
+  color: brown;
+  font-family: fantasy;
+}
+/* .items{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top:20px ;
+  padding-top: 20px;
+  height: 50px;
+} */
+.soo{
+  height:10%;
+  width:40%;
+  margin-left: 28%;
+}
