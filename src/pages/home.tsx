@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useGetUserID } from "../hooks/useGetUserID";
 import { useCookies } from "react-cookie";
+
 export const Home = () => {
   const userID = useGetUserID();
 
@@ -47,7 +48,7 @@ export const Home = () => {
       console.log(err);
     }
   };
-  const isSaved = (recipeid) => savedRecipes.includes(recipeid);
+  const isSaved = (recipeId: never) => savedRecipes.includes(recipeId);
   return (
     <div className="item">
       <div className="h2c">
@@ -61,19 +62,19 @@ export const Home = () => {
                 <div className="card" style={{ width: "18rem;" }}>
                   <img
                     className="card-img-top"
-                    src={recipe.imageUrl}
+                    src={recipe["imageUrl"]}
                     alt="Card image cap"
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{recipe.name}</h5>
-                    <p className="card-text">{recipe.instructions}</p>
+                    <h5 className="card-title">{recipe["name"]}</h5>
+                    <p className="card-text">{recipe["instructions"]}</p>
                     <button
                       type="button"
                       className="btn btn-primary"
-                      onClick={() => saveRecipe(recipe._id)}
-                      disabled={isSaved(recipe._id)}
+                      onClick={() => saveRecipe(recipe["_id"])}
+                      disabled={isSaved(recipe["_id"])}
                     >
-                      {isSaved(recipe._id) ? "Saved" : "Save"}
+                      {isSaved(recipe["_id"]) ? "Saved" : "Save"}
                     </button>
                   </div>
                 </div>
